@@ -113,6 +113,11 @@
 	    <source-file src="src/ios/CDVNotification.m" />
 	    <resource-file src="src/ios/CDVNotification.bundle" />
 		<framework src="AudioToolbox.framework" weak="true" />
+
+        <!-- ios specific notification apis -->
+        <js-module src="www/ios/notification.js" name="notification_ios">
+            <merges target="navigator.notification" />
+        </js-module>
     </platform>
 
     <!-- blackberry10 -->
