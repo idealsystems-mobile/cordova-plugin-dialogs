@@ -19,8 +19,8 @@
 -->
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-           id="org.apache.cordova.dialogs"
-      version="0.2.12-dev">
+        id="org.apache.cordova.dialogs"
+        version="0.2.12-dev">
 
     <name>Notification</name>
     <description>Cordova Notification Plugin</description>
@@ -39,17 +39,17 @@
             <feature name="Notification">
                 <param name="firefoxos-package" value="Notification" />
             </feature>
-        </config-file>                                         
-        
-		<asset src="www/firefoxos/notification.css" target="css/notification.css" />
-		<asset src="www/firefoxos/danger-press.png" target="img/danger-press.png" />
-		<asset src="www/firefoxos/danger.png" target="img/danger.png" />
-		<asset src="www/firefoxos/default.png" target="img/default.png" />
-		<asset src="www/firefoxos/gradient.png" target="img/gradient.png" />
-		<asset src="www/firefoxos/pattern.png" target="img/pattern.png" />
-		<asset src="www/firefoxos/recommend.png" target="img/recommend.png" />
+        </config-file>
+
+        <asset src="www/firefoxos/notification.css" target="css/notification.css" />
+        <asset src="www/firefoxos/danger-press.png" target="img/danger-press.png" />
+        <asset src="www/firefoxos/danger.png" target="img/danger.png" />
+        <asset src="www/firefoxos/default.png" target="img/default.png" />
+        <asset src="www/firefoxos/gradient.png" target="img/gradient.png" />
+        <asset src="www/firefoxos/pattern.png" target="img/pattern.png" />
+        <asset src="www/firefoxos/recommend.png" target="img/recommend.png" />
         <js-module src="src/firefoxos/notification.js" name="dialogs-impl">
-          <runs />
+            <runs />
         </js-module>
     </platform>
 
@@ -77,8 +77,8 @@
         </js-module>
 
     </platform>
-    
-     <!-- amazon-fireos -->
+
+    <!-- amazon-fireos -->
     <platform name="amazon-fireos">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Notification">
@@ -110,9 +110,9 @@
             </feature>
         </config-file>
         <header-file src="src/ios/CDVNotification.h" />
-	    <source-file src="src/ios/CDVNotification.m" />
-	    <resource-file src="src/ios/CDVNotification.bundle" />
-		<framework src="AudioToolbox.framework" weak="true" />
+        <source-file src="src/ios/CDVNotification.m" />
+        <resource-file src="src/ios/CDVNotification.bundle" />
+        <framework src="AudioToolbox.framework" weak="true" />
 
         <!-- ios specific notification apis -->
         <js-module src="www/ios/notification.js" name="notification_ios">
@@ -158,6 +158,11 @@
         <source-file src="src/wp/NotificationBox.xaml.cs" />
         <source-file src="src/wp/NotificationBox.xaml" />
         <source-file src="src/wp/notification-beep.wav" />
+
+        <!-- wp8 specific notification apis -->
+        <js-module src="www/wp/notification.js" name="notification_ios">
+            <merges target="navigator.notification" />
+        </js-module>
     </platform>
 
     <!-- windows8 -->
